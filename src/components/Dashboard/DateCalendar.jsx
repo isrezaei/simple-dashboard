@@ -1,6 +1,5 @@
 import React from 'react';
 import {Grid, Stack, Typography, useTheme} from "@mui/material";
-import 'react-calendar/dist/Calendar.css';
 import jalaali from 'jalaali-js';
 
 
