@@ -66,7 +66,7 @@ const StackedBarChart = () => {
         },
     };
 
-    const render = useMemo(() =>   <Bar options={options} data={data}/>, [])
+    const render = useMemo(() =>   <Bar options={options} data={data}/>, [labels])
 
     return (
         <Grid item width={"full"} p={1} xs={11} md={6} lg={4} order={{xs: 6}}>

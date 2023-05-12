@@ -65,7 +65,7 @@ const VBarChart = () => {
     };
 
 
-    const render = useMemo(() => <Bar options={options} data={data}/>, [])
+    const render = useMemo(() => <Bar options={options} data={data}/>, [labels])
 
     return (
         <Grid item xs={11} md={6} lg={4} p={1} order={{xs: 4}}>
