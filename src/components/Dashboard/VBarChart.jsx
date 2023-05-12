@@ -5,6 +5,7 @@ import {useTranslation} from "react-i18next";
 import {useRecoilValue} from "recoil";
 import {HandelTranslation} from "../../Recoil/atoms.js";
 import {labelsEN, labelsFA} from "./Labels.js";
+import {useMemo} from "react";
 
 ChartJS.register(
     CategoryScale,
@@ -63,6 +64,9 @@ const VBarChart = () => {
         ],
     };
 
+
+    const render = useMemo(() => <Bar options={options} data={data}/>, [])
+
     return (
         <Grid item xs={11} md={6} lg={4} p={1} order={{xs: 4}}>
             <Box width={"full"} p={2} borderRadius={5} bgcolor={"background.paper"}>
@@ -71,7 +75,7 @@ const VBarChart = () => {
                             fontSize={12}>
                     {t("bestSellingProducts")}
                 </Typography>
-                <Bar options={options} data={data}/>
+                {render}
             </Box>
 
         </Grid>

@@ -11,11 +11,12 @@ import {
     LineController,
     BarController,
 } from 'chart.js';
-import {Chart} from 'react-chartjs-2';
+import {Bar, Chart} from 'react-chartjs-2';
 import {useTranslation} from "react-i18next";
 import {useRecoilValue} from "recoil";
 import {HandelTranslation} from "../../Recoil/atoms.js";
 import {labelsEN, labelsFA} from "./Labels.js";
+import {useMemo} from "react";
 
 ChartJS.register(
     LinearScale,
@@ -66,12 +67,14 @@ const MultitypeChart = () => {
         ],
     };
 
+    const render = useMemo(() =>   <Chart type='bar' data={data}/>, [])
+
     return (
         <Grid item xs={11} md={6} lg={4} p={1} order={{xs: 7}}>
             <Box width={"full"} p={2} bgcolor={"background.paper"} borderRadius={5}>
                 <Typography color={text.primary} textAlign={"center"}
                             fontSize={12}>{t("bestSellingProducts")}</Typography>
-                <Chart type='bar' data={data}/>
+                {render}
             </Box>
         </Grid>
     );

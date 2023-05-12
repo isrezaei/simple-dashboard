@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Box, Grid, Stack} from "@mui/material";
-import Clock from "react-clock";
+import Clock from "react-clock"
 
 import 'react-clock/dist/Clock.css';
 

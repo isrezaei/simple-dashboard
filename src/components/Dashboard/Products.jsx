@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {Box, Grid, LinearProgress, Stack, Typography, useTheme} from "@mui/material";
 import {useTranslation} from "react-i18next";
+import {Chart} from "react-chartjs-2";
 
 const DummyProduct = [
     {

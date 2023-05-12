@@ -9,12 +9,13 @@ import {
     Title,
     Tooltip,
 } from 'chart.js';
-import {Line} from 'react-chartjs-2';
+import {Bar, Line} from 'react-chartjs-2';
 import {Box, Grid, Typography, useTheme} from "@mui/material";
 import {useTranslation} from "react-i18next";
 import {useRecoilValue} from "recoil";
 import {HandelTranslation} from "../../Recoil/atoms.js";
 import {labelsEN, labelsFA} from "./Labels.js";
+import {useMemo} from "react";
 
 ChartJS.register(
     CategoryScale,
@@ -75,6 +76,7 @@ const AreaChart = () => {
             },
         },
     };
+    const render = useMemo(() =>  <Line options={options} data={data}/>, [])
 
     return (
         <Grid item xs={11} md={6} lg={4} p={1} order={{xs: 5}}>
@@ -84,7 +86,7 @@ const AreaChart = () => {
                             fontSize={12}>
                     {t("bestSellingProducts")}
                 </Typography>
-                <Line options={options} data={data}/>
+                {render}
             </Box>
         </Grid>
     );
