@@ -17,7 +17,7 @@ const DateTime = () => {
 
 
     return (
-        <Grid item xs={5} md={3} lg={2} p={1} width={"full"} order={{xs: 1}}>
+        <Grid item xs={6} sm={6} md={3} lg={2} p={1} width={"full"} order={{xs: 1}}>
             <Stack justifyContent={"center"}
                    alignItems={"center"}
                    width={"full"}
