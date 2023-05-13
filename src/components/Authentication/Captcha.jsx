@@ -1,6 +1,6 @@
 import React from 'react';
 import {Checkbox, Stack, Typography, useTheme} from "@mui/material";
-import ClientCaptcha from "react-client-captcha";
+// import ClientCaptcha from "react-client-captcha";
 import {useTranslation} from "react-i18next";
 
 const Captcha = () => {
@@ -18,12 +18,12 @@ const Captcha = () => {
                 <Typography fontSize={12}>{t("remember me")}</Typography>
             </Stack>
 
-            <ClientCaptcha
-                backgroundColor={background.default}
-                fontColor={text.primary}
-                captchaCode={() => null}
-                height={25}
-                width={95}/>
+            {/*<ClientCaptcha*/}
+            {/*    backgroundColor={background.default}*/}
+            {/*    fontColor={text.primary}*/}
+            {/*    captchaCode={() => null}*/}
+            {/*    height={25}*/}
+            {/*    width={95}/>*/}
 
         </Stack>
     );

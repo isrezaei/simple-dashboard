@@ -2,7 +2,7 @@ import {atom} from "recoil";
 
 export const ThemeMood = atom({
     key : Math.random().toString(),
-    default : true
+    default : localStorage.getItem("color") || "dark"
 })
 
 export const HandelDashboard = atom({

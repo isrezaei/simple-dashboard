@@ -10,10 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/css": "^11.11.0",
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@hookform/error-message": "^2.0.1",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
     "chart.js": "^4.3.0",
@@ -23,7 +19,6 @@
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
     "react-chartjs-2": "^5.2.0",
-    "react-client-captcha": "^1.0.3",
     "react-clock": "^4.2.0",
     "react-countdown-circle-timer": "^3.2.1",
     "react-countup": "^6.4.2",

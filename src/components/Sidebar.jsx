@@ -71,7 +71,7 @@ const Sidebar = () => {
         <Stack width={"full"} spacing={2}>
 
             <Stack justifyContent={"center"} alignItems={"center"} spacing={2} p={2}>
-                <Image src={mood ? "/SharifDark.png" : "/Sharif.png"} width={120}/>
+                <Image src={mood === "dark" ? "/SharifDark.png" : "/Sharif.png"} width={120}/>
                 <Typography color={text.primary} variant={"subtitle1"} fontWeight={'bold'}>{t("sharif")}</Typography>
             </Stack>
 

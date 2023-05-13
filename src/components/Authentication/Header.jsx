@@ -18,7 +18,7 @@ const Header = () => {
             bgcolor={"background.paper"}
             alignItems={"center"}
             justifyContent={"center"}>
-            <Image src={mood ? "/SharifDark.png" : "/Sharif.png"} width={120}/>
+            <Image src={mood ===  "dark" ? "/SharifDark.png" : "/Sharif.png"} width={120}/>
             <Typography variant={"subtitle2"} fontWeight={'bold'}>{t("sharif")}</Typography>
             <Typography variant={"overline"}>{t("log in to your account")}</Typography>
         </Stack>

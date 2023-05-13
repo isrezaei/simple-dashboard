@@ -49,10 +49,14 @@ const Header = () => {
                     <Box> {translation ? "En" : "Fa"}</Box>
                 </IconButton>
 
-                <IconButton onClick={() => setTheme(prev => !prev)} size={"small"} color={"primary"}
+                <IconButton onClick={() => {
+                    localStorage.setItem("color" , theme === "dark" ? 'light' : "dark")
+                    setTheme(prev => prev === "dark" ? "light" : "dark")
+
+                }} size={"small"} color={"primary"}
                             variant={"contained"}>
                     {
-                        theme ? <LightModeIcon sx={{fontSize: 23}}/> : <NightsStayOutlinedIcon sx={{fontSize: 23}}/>
+                        theme === "dark" ? <LightModeIcon sx={{fontSize: 23}}/> : <NightsStayOutlinedIcon sx={{fontSize: 23}}/>
                     }
                 </IconButton>
             </Stack>

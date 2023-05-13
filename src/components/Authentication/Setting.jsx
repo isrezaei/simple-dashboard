@@ -10,11 +10,14 @@ const Setting = () => {
     const [theme, setTheme] = useRecoilState(ThemeMood)
     return (
         <Stack direction={"row"} justifyContent={"center"} alignItems={"center"} position={"absolute"} top={10} left={10}>
-            <IconButton onClick={() => setTheme(prev => !prev)}
+            <IconButton onClick={() => {
+                localStorage.setItem("color" , theme === "dark" ? 'light' : "dark")
+                setTheme(prev => prev === "dark" ? "light" : "dark")
+            }}
                         size={"small"} color={"primary"}
                         variant={"contained"}>
                 {
-                    theme ? <LightModeIcon sx={{fontSize: 23}}/> : <NightsStayOutlinedIcon sx={{fontSize: 23}}/>
+                    theme === "dark" ? <LightModeIcon sx={{fontSize: 23}}/> : <NightsStayOutlinedIcon sx={{fontSize: 23}}/>
                 }
             </IconButton>
             <IconButton onClick={() => setTranslation(prev => !prev)}

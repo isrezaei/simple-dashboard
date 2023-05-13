@@ -24,50 +24,52 @@ function App() {
         },
     ]);
 
+    console.log( localStorage.getItem("color"))
+
     const Theme = createTheme({
 
         direction: translation ? "rtl" : "ltr",
 
         palette: {
-            mode: mood ? "dark" : "light",
+            mode:localStorage.getItem("color") || "dark",
 
             primary: {
-                main: mood ? "#90f9c1" : '#6172e3',
-                light: mood ? "#c3ffdf" : '#757de8',
-                dark: mood ? "#01b68d" : '#549dff',
+                main: mood === "dark" ? "#90f9c1" : '#6172e3',
+                light: mood === "dark" ? "#c3ffdf" : '#757de8',
+                dark: mood === "dark" ? "#01b68d" : '#549dff',
             },
             secondary: {
-                main: mood ? "#ffcc80" : '#f50057',
-                light: mood ? "#ffffb1" : '#ff4081',
-                dark: mood ? "#bb7405" : '#c51162',
+                main: mood === "dark" ? "#ffcc80" : '#f50057',
+                light: mood === "dark" ? "#ffffb1" : '#ff4081',
+                dark: mood === "dark" ? "#bb7405" : '#c51162',
             },
             success: {
-                main: mood ? "#c6d6a5" : '#4caf50',
-                light: mood ? "#ecffd7" : '#81c784',
-                dark: mood ? "#5fad0d" : '#8bee89',
+                main: mood === "dark" ? "#c6d6a5" : '#4caf50',
+                light: mood === "dark" ? "#ecffd7" : '#81c784',
+                dark: mood === "dark" ? "#5fad0d" : '#8bee89',
             },
             warning: {
-                main: mood ? "#ffb74d" : '#ff9800',
-                light: mood ? "#ffeb99" : '#ffb74d',
-                dark: mood ? "#a16a00" : '#f57c00',
+                main: mood === "dark" ? "#ffb74d" : '#ff9800',
+                light: mood === "dark" ? "#ffeb99" : '#ffb74d',
+                dark: mood === "dark" ? "#a16a00" : '#f57c00',
             },
             error: {
-                main: mood ? "#ef9a9a" : '#f44336',
-                light: mood ? "#ffcccb" : '#e57373',
-                dark: mood ? "#b01114" : '#ffa1a1',
+                main: mood === "dark" ? "#ef9a9a" : '#f44336',
+                light: mood === "dark" ? "#ffcccb" : '#e57373',
+                dark: mood === "dark" ? "#b01114" : '#ffa1a1',
             },
             info: {
-                main: mood ? "#81d4fa" : '#2196f3',
-                light: mood ? "#b6ffff" : '#64b5f6',
-                dark: mood ? "#0074a1" : '#acb6c9',
+                main: mood === "dark" ? "#81d4fa" : '#2196f3',
+                light: mood === "dark" ? "#b6ffff" : '#64b5f6',
+                dark: mood  === "dark" ? "#0074a1" : '#acb6c9',
             },
             background: {
-                default: mood ? "#303030" : '#f3f3f3',
-                paper: mood ? "#424242" : '#e5e5e5',
+                default: mood === "dark" ? "#303030" : '#f3f3f3',
+                paper: mood === "dark" ? "#424242" : '#e5e5e5',
             },
             text: {
-                primary: mood ? "#f5f5f5" : '#333333',
-                secondary: mood ? "#9e9e9e" : '#757575',
+                primary: mood === "dark" ? "#f5f5f5" : '#333333',
+                secondary: mood === "dark" ? "#9e9e9e" : '#757575',
             },
         },
 
